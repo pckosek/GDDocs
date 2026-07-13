@@ -1,0 +1,34 @@
+Supplemental Material 1: My assignment breakdown for the course.
+
+Unit 1
+    Still Life world: create a scene that tells a story without movement (place nodes, meshinstances)
+    Scene transformers: take an existing scene and turn it into something else by changing light angles, materials
+    Solar system: Rotating nodes, scripts, script reuse, camera, parent child relationships
+    Group Assignment: Full control: speed, inputs, speed boost, forward backward movement
+    Summative: Flying machine - make a machine with (meshinstance) nodes, navigate through animated meshinstances.
+Unit 2
+    The staircase: charbody3d must climb a staircase (collisionshapes)
+    the crossing:  at the top of staircase is a kinematicbody the player must jump on strategically to get across
+    Summative: The summit: on the other side of kinematic bodies lies an area3d. basic signals, hud
+Unit 3
+    Python crash course: 100+ of problems, mostly easy, all essential and tied into later problems
+    Gridworld essentials: mapping neighbors, 1d list representing 2d space, 
+    PIL : getting started
+    Prim: make a maze with code, export to image
+    Cellular automata: create caves, export to image
+    Poisson disc sampling (optional)
+    Convolution (optional)
+    Perlin Noise (optional)
+    Voronoi Noise (optional)
+    Audio  : create custom sounds - iterative python problems
+Unit 4
+    2D moVement: create a level (tilemaplayer, charbody2d) where a player can move and jump
+    Collectibles and HUD: collect (area2d) and display, signals
+    Hazards and States: gamemanager, start screen, fail conditions 
+    Enemies: Charbody2d enemy, patrol behavior, gamemanager interaction, signals, groups
+    Summative: 2D Platformer Game
+Unit 5
+    Top-down 2D game
+    Telling stories with games
+    Giving NPCs and Enemies behavioral rules
+    Summative: 2D - Overworld Game with multiple levels

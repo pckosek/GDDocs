@@ -1,0 +1,91 @@
+site_name: Post-AP Game Dev
+site_description: Game Development with Godot and Python
+site_author: Your Name Here
+docs_dir: docs
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: blue
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs             # Unit tabs across the top
+    - navigation.tabs.sticky      # Tabs stay visible on scroll
+    # - navigation.sections         # Group headings in sidebar
+    #- navigation.expand           # Auto-expand active section
+    - navigation.indexes          # Section index pages
+    - navigation.top              # Back-to-top button
+    - toc.follow                  # TOC highlights as you scroll
+    - content.code.copy           # Copy button on code blocks
+    - content.tabs.link           # Sync tabbed code blocks
+
+markdown_extensions:
+  - admonition                    # !!! note / warning / tip boxes
+  - pymdownx.details              # Collapsible admonitions
+  - pymdownx.superfences          # Fenced code blocks + nesting
+  - pymdownx.tabbed:
+      alternate_style: true       # Tabbed code blocks (GDScript / Python)
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Operations: 
+    - Structural Operations:
+      - "Create a New Scene": unit0/structural/00-new_scene.md
+      - "Add a Child Node": unit0/structural/01-add_child_node.md
+      - "Save a Scene": unit0/structural/02-save_a_scene.md
+      - "Create FileSystem Folder": unit0/structural/03-create_a_folder.md
+      - "Renaming Nodes": unit0/structural/04-rename_nodes.md
+      - "Instantiate a Scene": unit0/structural/05-instantiate_scene.md
+    - Editor Navigation:
+      - "Zoom View": unit0/navigation/0-zoom_view.md
+      - "Orbit View View": unit0/navigation/1-orbit_view.md
+      - "Pan View": unit0/navigation/2-pan_view.md
+      - "Focus Object": unit0/navigation/3-focus_on_object.md
+      - "Align to Axis": unit0/navigation/4-align_to_axis.md
+    - Object Placement:
+      - "Move an Object": unit0/placement/1-move_object.md
+      - "Rotate an Object": unit0/placement/2-rotate_object.md
+      - "Scale an Object": unit0/placement/3-scale_object.md
+      - "Create a Hierarchy": unit0/navigation/4-create_hierarchy.md
+      - "Align Tranform to View": unit0/navigation/5-align_transform.md
+    - Behavior Operations:
+      - "Create a Script": unit0/behavior/0.2.0-create_script.md
+      - "Attach a Script": unit0/behavior/0.2.1-attach_a_script.md
+      - "Run a Scene": unit0/behavior/0.2.2-run_a_scene.md
+      - "Run the Project": unit0/behavior/0.2.3-run_the_project.md
+      - "Print Debug Info": unit0/behavior/0.2.4-print_debug_information.md
+    - Inspector Operations:
+      - "Assign a Resource": unit0/inspector/0-assign_resource.md
+      - "Assign a Shape": unit0/inspector/1-assign_shape.md
+      - "Assign a Mesh": unit0/inspector/2-assign_mesh.md
+      - "Assign a Material": unit0/inspector/3-assign_material.md
+      - "Modify a Material": unit0/inspector/4-modify_material.md
+      - "Save a Resource": unit0/inspector/5-save_resource.md
+    - Configuration Operations:
+      - "Configure Input Mapping": unit0/configuration/0-input_mapping.md
+      - "Configure Autoload Script": unit0/configuration/1-autoload_script.md
+      - "Configure System Font": unit0/configuration/2-system_font.md
+      - "Configure Physics Engine": unit0/configuration/3-physics_engine.md
+      - "Configure Project Settings": unit0/configuration/4-project_settings.md
+      - "Configure Export Settings": unit0/configuration/5-export_settings.md
+      - "Configure Window Settings": unit0/configuration/6-window_settings.md
+
+  - Techniques: 
+    - Scene Construction:
+      - "Create Ground": unit1/construction/ground.md
+      - "Create a Reusable Scene": unit1/construction/reusable.md
+    - World Buildin:
+      - "Light a Scene": unit1/construction/ground.md
+      - "Mood": unit1/construction/reusable.md
+      - "Sky": unit1/construction/reusable.md      
+

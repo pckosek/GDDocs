@@ -1,0 +1,58 @@
+Collision Patterns
+    Detect every collision this frame
+    Detect the first collision
+    Identify what I collided with
+    Identify which side I collided with (collision normal)
+    Push a RigidBody
+    Stop at a wall
+    Slide along a wall
+    Stand on a moving platform
+    Detect the floor
+    Detect the ceiling
+    Detect a ledge
+    Detect stairs
+    Detect steep slopes
+Area Patterns
+    Enter an Area
+    Exit an Area
+    Collect an item
+    Trigger a checkpoint
+    Open a door
+    Start a dialogue
+    Play a sound
+    Activate a cutscene
+    Count objects inside an Area
+    Require multiple objects inside an Area
+Layer & Mask Patterns
+    Player only
+    Enemy only
+    Projectile only
+    Friendly fire on/off
+    UI raycasts ignore world
+    Trigger but don't collide
+    Physics without triggers
+    Temporary invulnerability by changing masks
+Movement Patterns
+    Jump
+    Double Jump
+    Jump Buffer
+    Coyote Time
+    Patrol between walls
+    Patrol between points
+    Face movement direction
+    Swap Walk / Jump Animations 
+    Follow player
+    Maintain distance
+    Orbit target
+    Knockback
+    Dash
+    Conveyor belt
+    Elevator
+State Patterns
+    Idle / Walk
+    Walk / Run
+    Ground / Air
+    Alive / Dead
+    Active / Inactive
+    Collected / Available
+    Locked / Unlocked

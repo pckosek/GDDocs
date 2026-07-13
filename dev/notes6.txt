@@ -1,0 +1,184 @@
+Unit 6
+
+2D Platformers
+
+Big Question
+
+How do the rules of a world create the feeling of movement?
+
+--------------------------------
+
+6.1 CharacterBody2D
+6.1.1 Why CharacterBody2D?
+6.1.2 Velocity
+6.1.3 Gravity
+6.1.4 move_and_slide()
+6.1.5 move_and_collide()
+6.1.6 Collision Layers
+
+--------------------------------
+
+6.2 Platforming
+6.2.1 Jumping
+6.2.2 Variable Jump Height
+6.2.3 Coyote Time
+6.2.4 Jump Buffering
+6.2.5 Slopes
+6.2.6 One-Way Platforms
+
+--------------------------------
+
+6.3 Sprites
+6.3.1 What is a Sprite?
+6.3.2 AnimatedSprite2D
+6.3.3 AnimationPlayer
+6.3.4 State-Driven Animation
+6.3.5 Sprite Orientation
+6.3.6 Animation as Feedback
+
+AnimatedSprite2D
+AnimationPlayer
+Flip H
+...
+
+--------------------------------
+
+6.4 TileMapLayer
+
+How do we build large 2D worlds efficiently?
+
+6.4.1 What is a TileMapLayer?
+6.4.2 Creating a TileSet
+6.4.3 Painting Tiles
+6.4.4 Terrain Sets
+6.4.5 Collision Tiles
+6.4.6 TileMap Layers
+6.4.7 Reading TileMaps
+6.4.8 Procedural TileMaps
+
+--------------------------------
+
+6.5 Gameplay Objects
+
+Big Question
+
+How do independent objects participate in gameplay?
+
+--------------------------------
+
+6.5.1 Area2D
+
+Detection
+
+--------------------------------
+
+6.5.2 Collectibles
+
+Interaction
+
+Signals
+
+queue_free()
+
+GameManager
+
+--------------------------------
+
+6.5.3 Enemy States
+
+Idle
+
+Patrol
+
+Alert
+
+Attack
+
+Dead
+
+--------------------------------
+
+6.5.4 Damage Systems
+
+Hitboxes
+
+Hurtboxes
+
+Health
+
+Knockback
+
+--------------------------------
+
+6.5.5 Death & Destruction
+
+Animation
+
+Sound
+
+queue_free()
+
+Deferred cleanup
+
+--------------------------------
+
+6.5.6 Connecting Gameplay Systems
+
+Signals
+
+GameManager
+
+Lives
+
+Score
+
+Respawn
+
+UI
+
+Audio
+--------------------------------
+
+6.6 World Presentation
+
+How do we present the world to the player?
+
+--------------------------------
+
+6.6.1 Camera2D
+
+--------------------------------
+
+6.6.2 Following the Player
+
+--------------------------------
+
+6.6.3 Camera Limits
+
+--------------------------------
+
+6.6.4 Parallax
+
+--------------------------------
+
+6.6.5 Camera Feedback
+
+Shake
+Zoom
+Lag
+
+--------------------------------
+
+6.6.6 Framing the Player
+
+--------------------------------
+
+6.7 Editor Automation
+
+EditorScript
+
+Populate TileMap
+
+Import Pipeline
+
+Automatic Placement
