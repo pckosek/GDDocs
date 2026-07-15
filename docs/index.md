@@ -1,29 +1,22 @@
-# 🎮 Post-AP Game Development
+# Start Here
 
-Welcome to the course site. Use the tabs above to navigate between units.
+This site is a workbench, not a syllabus. It's organized so you can find what you need by what you're trying to do — not by remembering which week of class covered it.
 
-Each tutorial teaches **one concept at a time** — no surprises.
+There's no required order. Jump to whichever section answers your question right now.
 
----
+## The Sections
 
-## Course Map
+| Section | Go here when... |
+|---|---|
+| **[Editor](editor/index.md)** | You need to know how to *do something in the Godot editor itself* — create a scene, assign a resource, configure a project setting. |
+| **[Operations](operations/access.md)** | You're thinking about a general operation on data — access, combine, filter, generate, modify, randomize, repeat, transform — independent of any language or engine. |
+| **[Programming](programming/data-structures/lists.md)** | You're working in Python — data structures, procedural generation, images, sound, spatial grids. |
+| **[Building Games](building-games/scene-composition/ground.md)** | You want to understand *how a system works* — scene composition, motion and animation, physics and character control, game architecture and state, tile-based worlds, presentation and interface. |
+| **[Techniques](techniques/index.md)** | You want a specific, reusable recipe — Coyote Time, Checkpoints, Dialogue, Inventory, Moving Platforms, Patrols, and everything like them. Start here if you already know *what* you want to build. |
+| **[Game Design Theory](game-design-theory/understanding-games/intro.md)** | You want to think about *why* a game works — mechanics, systems, level design, narrative, and the practice of making games. |
 
-| Unit | Focus | Tools |
-|------|-------|-------|
-| [Unit 1 – 3D World](unit1/index.md) | Nodes, meshes, scripts, movement | Godot |
-| [Unit 2 – Physics](unit2/index.md) | Collision, CharacterBody, signals | Godot |
-| [Unit 3 – Procedural Python](unit3/index.md) | Algorithms, image generation | Python / PIL |
-| [Unit 4 – 2D Platformer](unit4/index.md) | TileMap, 2D physics, game systems | Godot |
+## New to this course?
 
----
+If you've never opened Godot before, start with **[Editor](editor/index.md)**. Everything else assumes you can already create a scene and attach a script.
 
-## How to Use This Site
-
-- **Pick a unit** from the tabs at the top.
-- **Pick a topic** from the sidebar.
-- Each page teaches exactly one thing.
-- Look for the **🧩 Challenge** section at the bottom to go deeper.
-- Look for **🚀 Explore More** links if you want to go further.
-
-!!! tip "Stuck?"
-    Every page has a working minimal example. Start there, then experiment.
+If you already know your way around the editor and are looking for a specific implementation pattern, the **[Techniques](techniques/index.md)** index is the fastest way in — every reusable recipe in this site is tagged and searchable from there.
