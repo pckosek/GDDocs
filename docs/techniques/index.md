@@ -1,12 +1,39 @@
-# Techniques Index
+# Techniques
 
-Every reusable implementation recipe in this site, in one place. Each page teaches one specific, named technique you can drop into a project — this index exists so you never have to guess which conceptual domain a technique 'belongs' to before you can find it.
+Techniques is where reusable implementation recipes live — Coyote Time, Checkpoints, Dialogue, Inventory, Moving Platforms, Patrols, and everything like them. Each page teaches one specific, named technique you can drop into a project, independent of which conceptual domain it happens to build on. Come here when you already know *what* you want to build and just need the recipe for it.
 
-Every technique page carries `tags` in its front matter (visible above), so a tag-based search across this index will find it even if you don't know which category below it's filed under.
+If you want to understand *why* a technique works — the physics, architecture, or presentation concept underneath it — that material lives in [Building Games](../building-games/index.md) instead. Techniques assumes you'll come back to that section when a recipe references a concept you haven't seen yet, rather than re-explaining it here.
+
+## What you'll learn
+
+- How to implement dozens of specific, reusable gameplay features rather than general concepts
+- Which techniques form families worth reading together (like the 2D/3D coyote time pair, or the three patrol variants)
+- Where a technique's underlying concept lives, when you need the deeper explanation
+
+## Recommended prerequisites
+
+[Editor](../editor/index.md) and at least the relevant subsection of [Building Games](../building-games/index.md) — most techniques assume you can already create a scene, attach a script, and understand the physics body or architecture pattern the technique is built on.
+
+## Categories in this section
+
+- [Movement & Platforming](movement-and-platforming/index.md) — jumping, dashing, moving platforms, and patrol movement.
+- [Triggers & World Interaction](triggers-and-world-interaction/index.md) — checkpoints, doors, switches, and area-based triggers.
+- [Inventory & Progression](inventory-and-progression/index.md) — collecting items, tracking inventory, damage, and death.
+- [Dialogue & Narrative Delivery](dialogue-and-narrative-delivery/index.md) — the conversation system itself, beyond just triggering it.
+- [Enemies & Combat](enemies-and-combat/index.md) — patrol, chase, investigation, combat, and boss design.
+- [Tile-World Population](tile-world-population/index.md) — spawning and procedurally populating a tile-based level.
+
+## Where to go next
+
+[Building Games](../building-games/index.md) is where every technique's underlying concept lives — if a technique page references CharacterBody, signals, or a state machine and you want the deeper explanation, that's where to find it. [Game Design Theory](../game-design-theory/understanding-games/index.md) is a good companion once you're comfortable with the implementation side and want to reason about which techniques actually serve your game's design.
 
 ---
 
-## Movement & Platforming
+## Full Technique Index (searchable by tag)
+
+Every technique page below also carries `tags` in its own front matter, so a tag-based search will find it even if you don't know which category above it's filed under. This flat list exists specifically so no technique is ever more than one click away, regardless of the category structure above.
+
+### Movement & Platforming
 
 - [Walking Into a Wall](movement-and-platforming/character-hits-wall.md)
 - [Conveyor Belt](movement-and-platforming/conveyor-belt.md)
@@ -38,7 +65,7 @@ Every technique page carries `tags` in its front matter (visible above), so a ta
 - [NPC Stops at a Wall](movement-and-platforming/stop-at-wall.md)
 - [Identify Which Side I Collided With](movement-and-platforming/which-side-collision.md)
 
-## Triggers & World Interaction
+### Triggers & World Interaction
 
 - [Enter an Area](triggers-and-world-interaction/area-enter.md)
 - [Exit an Area](triggers-and-world-interaction/area-exit.md)
@@ -55,7 +82,7 @@ Every technique page carries `tags` in its front matter (visible above), so a ta
 - [Switches & Events](triggers-and-world-interaction/switches.md)
 - [World Interaction](triggers-and-world-interaction/tile-based-interaction.md)
 
-## Inventory & Progression
+### Inventory & Progression
 
 - [Area2D](inventory-and-progression/2d-area-trigger.md)
 - [Collectibles](inventory-and-progression/collectibles.md)
@@ -65,11 +92,11 @@ Every technique page carries `tags` in its front matter (visible above), so a ta
 - [Inventory](inventory-and-progression/inventory.md)
 - [Quests](inventory-and-progression/quests.md)
 
-## Dialogue & Narrative Delivery
+### Dialogue & Narrative Delivery
 
 - [Dialogue](dialogue-and-narrative-delivery/dialogue-system.md)
 
-## Enemies & Combat
+### Enemies & Combat
 
 - [Boss Design](enemies-and-combat/boss-encounters.md)
 - [Chase](enemies-and-combat/chase.md)
@@ -78,7 +105,7 @@ Every technique page carries `tags` in its front matter (visible above), so a ta
 - [Investigation](enemies-and-combat/investigation.md)
 - [Patrol](enemies-and-combat/patrol.md)
 
-## Tile-World Population
+### Tile-World Population
 
 - [Procedural Population](tile-world-population/populating-a-level.md)
 - [Spawn Systems](tile-world-population/spawning.md)

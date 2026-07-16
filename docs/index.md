@@ -9,11 +9,11 @@ There's no required order. Jump to whichever section answers your question right
 | Section | Go here when... |
 |---|---|
 | **[Editor](editor/index.md)** | You need to know how to *do something in the Godot editor itself* — create a scene, assign a resource, configure a project setting. |
-| **[Operations](operations/access.md)** | You're thinking about a general operation on data — access, combine, filter, generate, modify, randomize, repeat, transform — independent of any language or engine. |
-| **[Programming](programming/data-structures/lists.md)** | You're working in Python — data structures, procedural generation, images, sound, spatial grids. |
-| **[Building Games](building-games/scene-composition/ground.md)** | You want to understand *how a system works* — scene composition, motion and animation, physics and character control, game architecture and state, tile-based worlds, presentation and interface. |
+| **[Operations](operations/index.md)** | You're thinking about a general operation on data — access, combine, filter, generate, modify, randomize, repeat, transform — independent of any language or engine. |
+| **[Programming](programming/index.md)** | You're working in Python — data structures, procedural generation, images, sound, spatial grids. |
+| **[Building Games](building-games/index.md)** | You want to understand *how a system works* — scene composition, motion and animation, physics and character control, game architecture and state, tile-based worlds, presentation and interface. |
 | **[Techniques](techniques/index.md)** | You want a specific, reusable recipe — Coyote Time, Checkpoints, Dialogue, Inventory, Moving Platforms, Patrols, and everything like them. Start here if you already know *what* you want to build. |
-| **[Game Design Theory](game-design-theory/understanding-games/intro.md)** | You want to think about *why* a game works — mechanics, systems, level design, narrative, and the practice of making games. |
+| **[Game Design Theory](game-design-theory/index.md)** | You want to think about *why* a game works — mechanics, systems, level design, narrative, and the practice of making games. |
 
 ## New to this course?
 

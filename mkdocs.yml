@@ -12,22 +12,24 @@ theme:
     text: Roboto
     code: Roboto Mono
   features:
-    - navigation.tabs             # Unit tabs across the top
-    - navigation.tabs.sticky      # Tabs stay visible on scroll
-    # - navigation.sections         # Group headings in sidebar
-    #- navigation.expand           # Auto-expand active section
-    - navigation.indexes          # Section index pages
-    - navigation.top              # Back-to-top button
-    - toc.follow                  # TOC highlights as you scroll
-    - content.code.copy           # Copy button on code blocks
-    - content.tabs.link           # Sync tabbed code blocks
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.path
+    - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
+    - toc.follow
+    - content.code.copy
+    - content.tabs.link
 
 markdown_extensions:
-  - admonition                    # !!! note / warning / tip boxes
-  - pymdownx.details              # Collapsible admonitions
-  - pymdownx.superfences          # Fenced code blocks + nesting
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.tabbed:
-      alternate_style: true       # Tabbed code blocks (GDScript / Python)
+      alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.emoji:
@@ -36,56 +38,343 @@ markdown_extensions:
   - toc:
       permalink: true
 
+plugins:
+  - search
+  - tags:
+      tags_file: techniques/index.md
+
 nav:
-  - Home: index.md
-  - Operations: 
-    - Structural Operations:
-      - "Create a New Scene": unit0/structural/00-new_scene.md
-      - "Add a Child Node": unit0/structural/01-add_child_node.md
-      - "Save a Scene": unit0/structural/02-save_a_scene.md
-      - "Create FileSystem Folder": unit0/structural/03-create_a_folder.md
-      - "Renaming Nodes": unit0/structural/04-rename_nodes.md
-      - "Instantiate a Scene": unit0/structural/05-instantiate_scene.md
-    - Editor Navigation:
-      - "Zoom View": unit0/navigation/0-zoom_view.md
-      - "Orbit View View": unit0/navigation/1-orbit_view.md
-      - "Pan View": unit0/navigation/2-pan_view.md
-      - "Focus Object": unit0/navigation/3-focus_on_object.md
-      - "Align to Axis": unit0/navigation/4-align_to_axis.md
-    - Object Placement:
-      - "Move an Object": unit0/placement/1-move_object.md
-      - "Rotate an Object": unit0/placement/2-rotate_object.md
-      - "Scale an Object": unit0/placement/3-scale_object.md
-      - "Create a Hierarchy": unit0/navigation/4-create_hierarchy.md
-      - "Align Tranform to View": unit0/navigation/5-align_transform.md
-    - Behavior Operations:
-      - "Create a Script": unit0/behavior/0.2.0-create_script.md
-      - "Attach a Script": unit0/behavior/0.2.1-attach_a_script.md
-      - "Run a Scene": unit0/behavior/0.2.2-run_a_scene.md
-      - "Run the Project": unit0/behavior/0.2.3-run_the_project.md
-      - "Print Debug Info": unit0/behavior/0.2.4-print_debug_information.md
-    - Inspector Operations:
-      - "Assign a Resource": unit0/inspector/0-assign_resource.md
-      - "Assign a Shape": unit0/inspector/1-assign_shape.md
-      - "Assign a Mesh": unit0/inspector/2-assign_mesh.md
-      - "Assign a Material": unit0/inspector/3-assign_material.md
-      - "Modify a Material": unit0/inspector/4-modify_material.md
-      - "Save a Resource": unit0/inspector/5-save_resource.md
-    - Configuration Operations:
-      - "Configure Input Mapping": unit0/configuration/0-input_mapping.md
-      - "Configure Autoload Script": unit0/configuration/1-autoload_script.md
-      - "Configure System Font": unit0/configuration/2-system_font.md
-      - "Configure Physics Engine": unit0/configuration/3-physics_engine.md
-      - "Configure Project Settings": unit0/configuration/4-project_settings.md
-      - "Configure Export Settings": unit0/configuration/5-export_settings.md
-      - "Configure Window Settings": unit0/configuration/6-window_settings.md
-
-  - Techniques: 
-    - Scene Construction:
-      - "Create Ground": unit1/construction/ground.md
-      - "Create a Reusable Scene": unit1/construction/reusable.md
-    - World Buildin:
-      - "Light a Scene": unit1/construction/ground.md
-      - "Mood": unit1/construction/reusable.md
-      - "Sky": unit1/construction/reusable.md      
-
+  - Start Here: index.md
+  - Editor:
+    - editor/index.md
+    - Inspector And Resources:
+        - editor/inspector-and-resources/index.md
+        - "Assign a Material": editor/inspector-and-resources/assign-material.md
+        - "Assign a Mesh": editor/inspector-and-resources/assign-mesh.md
+        - "Assign a Resource": editor/inspector-and-resources/assign-resource.md
+        - "Assign a Shape": editor/inspector-and-resources/assign-shape.md
+        - "Modify a Material": editor/inspector-and-resources/modify-material.md
+        - "Save a Resource": editor/inspector-and-resources/save-resource.md
+    - Placement And Transforms:
+        - editor/placement-and-transforms/index.md
+        - "Align Transform to View": editor/placement-and-transforms/align-transform.md
+        - "Create a Transform Hierarchy": editor/placement-and-transforms/create-hierarchy.md
+        - "Move Object": editor/placement-and-transforms/move-object.md
+        - "Rotate Object": editor/placement-and-transforms/rotate-object.md
+        - "Scale Object": editor/placement-and-transforms/scale-object.md
+    - Project Configuration:
+        - editor/project-configuration/index.md
+        - "Configure an Autoload": editor/project-configuration/autoload-script.md
+        - "Configure Export Settings": editor/project-configuration/export-settings.md
+        - "Configure Input Mapping": editor/project-configuration/input-mapping.md
+        - "Configure Physics Engine Settings": editor/project-configuration/physics-engine.md
+        - "Configure Project Settings": editor/project-configuration/project-settings.md
+        - "Configure a System Font": editor/project-configuration/system-font.md
+        - "Configure Window Settings": editor/project-configuration/window-settings.md
+    - Scenes And Nodes:
+        - editor/scenes-and-nodes/index.md
+        - "Add a Child Node": editor/scenes-and-nodes/add-child-node.md
+        - "Create Folders in the FileSystem": editor/scenes-and-nodes/create-a-folder.md
+        - "Instantiate a Scene": editor/scenes-and-nodes/instantiate-a-scene.md
+        - "Create a New Scene": editor/scenes-and-nodes/new-scene.md
+        - "Rename Nodes": editor/scenes-and-nodes/rename-nodes.md
+        - "Save a Scene": editor/scenes-and-nodes/save-a-scene.md
+    - Scripting Basics:
+        - editor/scripting-basics/index.md
+        - "Attach a Script": editor/scripting-basics/attach-a-script.md
+        - "Create Script": editor/scripting-basics/create-script.md
+        - "Print Debug Information": editor/scripting-basics/print-debug-information.md
+        - "Run a Scene": editor/scripting-basics/run-a-scene.md
+        - "Run the Project": editor/scripting-basics/run-the-project.md
+    - Viewport Navigation:
+        - editor/viewport-navigation/index.md
+        - "Align View to Axis": editor/viewport-navigation/align-to-axis.md
+        - "Focus Selected Object": editor/viewport-navigation/focus-on-object.md
+        - "Orbit the View": editor/viewport-navigation/orbit-view.md
+        - "Pan the View": editor/viewport-navigation/pan-view.md
+        - "Zoom the View": editor/viewport-navigation/zoom-view.md
+  - Operations:
+    - operations/index.md
+    - "Access": operations/access.md
+    - "Combine": operations/combine.md
+    - "Filter": operations/filter.md
+    - "Generate": operations/generate.md
+    - "Modify": operations/modify.md
+    - "Randomize": operations/randomize.md
+    - "Repeat": operations/repeat.md
+    - "Transform": operations/transform.md
+  - Programming:
+    - programming/index.md
+    - Data Structures:
+        - programming/data-structures/index.md
+        - "Choosing a Representation": programming/data-structures/choosing-a-data-structure.md
+        - "What is a Collection?": programming/data-structures/collections-overview.md
+        - "Associative Collections (Dictionaries)": programming/data-structures/dictionaries.md
+        - "Ordered Collections (Lists)": programming/data-structures/lists.md
+        - "Representing Information": programming/data-structures/representing-information.md
+        - "Unique Collections (Sets)": programming/data-structures/sets.md
+        - "Fixed Collections (Tuples)": programming/data-structures/tuples.md
+    - Media:
+        - programming/media/index.md
+        - "Distance Fields": programming/media/distance-fields.md
+        - "Images as Data": programming/media/image-data-representation.md
+        - "Pixels": programming/media/pixel-access.md
+        - "Procedural Patterns": programming/media/procedural-image-overview.md
+        - "Transform Images": programming/media/transforming-images.md
+        - "Creating Images (PIL)": programming/media/working-with-pil.md
+    - Procedural Generation:
+        - programming/procedural-generation/index.md
+        - "Local Rules": programming/procedural-generation/cellular-automata-and-local-rules.md
+        - "Fields": programming/procedural-generation/field-based-generation.md
+        - "Traversal": programming/procedural-generation/graph-and-grid-traversal.md
+        - "Creative Exploration": programming/procedural-generation/procedural-exploration.md
+        - "Sampling": programming/procedural-generation/sampling-strategies.md
+        - "Randomness": programming/procedural-generation/using-randomness.md
+    - Sound:
+        - programming/sound/index.md
+        - "Combine Sounds": programming/sound/combining-sound-sources.md
+        - "Generate Waveforms": programming/sound/generating-sound.md
+        - "Procedural Sound Effects": programming/sound/procedural-sound-overview.md
+        - "Shape Sound": programming/sound/shaping-sound.md
+        - "Sound as Data": programming/sound/sound-data-representation.md
+        - "Samples": programming/sound/sound-samples.md
+    - Spatial:
+        - programming/spatial/index.md
+        - "Boundary Conditions": programming/spatial/boundary.md
+        - "Cardinal Neighbors": programming/spatial/cardinal.md
+        - "Convert Between Coordinates": programming/spatial/convert.md
+        - "What is a Gridworld?": programming/spatial/gridworld.md
+        - "Neighborhood Kernels": programming/spatial/kernels.md
+        - "Lookup Tables": programming/spatial/lookup.md
+        - "What is a Neighbor?": programming/spatial/neighbors.md
+        - "Represent a Grid": programming/spatial/represent.md
+        - "Visualize a Grid": programming/spatial/visualize.md
+  - Building Games:
+    - building-games/index.md
+    - Game Architecture:
+        - building-games/game-architecture/index.md
+        - "Access the Game Manager": building-games/game-architecture/accessing-the-manager.md
+        - "Configure an Autoload": building-games/game-architecture/autoload-singletons.md
+        - "Broadcast Global Events": building-games/game-architecture/broadcasting-from-a-manager.md
+        - "Build a Simple State Machine": building-games/game-architecture/building-a-simple-state-machine.md
+        - "Change State": building-games/game-architecture/changing-state.md
+        - "Connect Signals in Code": building-games/game-architecture/connecting-signals-with-code.md
+        - "Create a Game Manager": building-games/game-architecture/creating-a-manager.md
+        - "Create Custom Signals": building-games/game-architecture/custom-signals.md
+        - "Decoupling Systems": building-games/game-architecture/decoupling-with-signals.md
+        - "Local vs Global State": building-games/game-architecture/global-vs-local-state.md
+        - "What is Game State?": building-games/game-architecture/modeling-game-state.md
+        - "Mutable and Immutable State": building-games/game-architecture/mutable-vs-immutable.md
+        - "One Event, Many Listeners": building-games/game-architecture/one-to-many-signals.md
+        - "Send Data with Signals": building-games/game-architecture/passing-data-with-signals.md
+        - "Persistence": building-games/game-architecture/persisting-tile-world-state.md
+        - "Reset the Game": building-games/game-architecture/resetting-manager-state.md
+        - "Restrict Invalid Transitions": building-games/game-architecture/restricting-invalid-transitions.md
+        - "Review Built-in Signals": building-games/game-architecture/signals-deep-dive.md
+        - "Single Source of Truth": building-games/game-architecture/single-source-of-truth.md
+        - "What is a State?": building-games/game-architecture/state-machines-intro.md
+        - "Create an Enum": building-games/game-architecture/states-as-enums.md
+        - "Store Global Variables": building-games/game-architecture/storing-data-in-a-manager.md
+        - "Track Current State": building-games/game-architecture/tracking-current-state.md
+        - "Identify Gameplay State": building-games/game-architecture/what-is-game-state.md
+    - Motion And Animation:
+        - building-games/motion-and-animation/index.md
+        - "AnimatedSprite2D": building-games/motion-and-animation/animatedsprite2d.md
+        - "AnimationPlayer": building-games/motion-and-animation/animationplayer.md
+        - "Autonomous Motion": building-games/motion-and-animation/autonomous-motion.md
+        - "Choosing an Animation Strategy": building-games/motion-and-animation/choosing-an-animation-strategy.md
+        - "Continuous Updates": building-games/motion-and-animation/continuous-checks.md
+        - "Input Events": building-games/motion-and-animation/input-events.md
+        - "Instant Motion": building-games/motion-and-animation/instant-change.md
+        - "Interpolation": building-games/motion-and-animation/interpolation.md
+        - "Motion Through Time": building-games/motion-and-animation/motion-through-time.md
+        - "Responsive Motion": building-games/motion-and-animation/responsive-motion.md
+        - "Signals": building-games/motion-and-animation/signals-introduction.md
+        - "What is a Sprite?": building-games/motion-and-animation/sprite-animation-intro.md
+        - "State-Driven Animation": building-games/motion-and-animation/sprite-animation-states.md
+        - "Animation as Feedback": building-games/motion-and-animation/sprite-feedback.md
+        - "Sprite Orientation": building-games/motion-and-animation/sprite-orientation.md
+        - "Timer Events": building-games/motion-and-animation/timers.md
+        - "Tweening": building-games/motion-and-animation/tweening.md
+    - Physics And Character Control:
+        - building-games/physics-and-character-control/index.md
+        - "Collision Layers": building-games/physics-and-character-control/2d-collision-layers.md
+        - "Gravity": building-games/physics-and-character-control/2d-gravity.md
+        - "Velocity": building-games/physics-and-character-control/2d-velocity.md
+        - "Create an AnimatableBody3D": building-games/physics-and-character-control/animatable-body.md
+        - "Create an Area3D": building-games/physics-and-character-control/area3d.md
+        - "Create a CharacterBody3D": building-games/physics-and-character-control/character-body.md
+        - "Choosing a Physical Representation": building-games/physics-and-character-control/choosing-a-body-type.md
+        - "Detect Every Collision This Frame": building-games/physics-and-character-control/collision-detection-basics.md
+        - "Identify What I Collided With": building-games/physics-and-character-control/identifying-what-you-hit.md
+        - "Player and Enemy": building-games/physics-and-character-control/layers-enemy-mask.md
+        - "Player Only": building-games/physics-and-character-control/layers-player-mask.md
+        - "`move_and_collide()`": building-games/physics-and-character-control/move-and-collide.md
+        - "`move_and_slide()`": building-games/physics-and-character-control/move-and-slide.md
+        - "Create a RigidBody3D": building-games/physics-and-character-control/rigidbody.md
+        - "Create a StaticBody3D": building-games/physics-and-character-control/staticbody.md
+        - "Why CharacterBody2D?": building-games/physics-and-character-control/why-charbody2d.md
+    - Presentation And Interface:
+        - building-games/presentation-and-interface/index.md
+        - "Bind Interface Elements to Game Data": building-games/presentation-and-interface/binding-ui-to-data.md
+        - "Editor Automation": building-games/presentation-and-interface/camera-automation.md
+        - "Following the Player": building-games/presentation-and-interface/camera-following.md
+        - "Framing the Player": building-games/presentation-and-interface/camera-framing.md
+        - "Camera Limits": building-games/presentation-and-interface/camera-limits.md
+        - "Camera2D": building-games/presentation-and-interface/camera2d-basics.md
+        - "Create a CanvasLayer": building-games/presentation-and-interface/canvas-layer.md
+        - "Create a Control Node": building-games/presentation-and-interface/control-node-basics.md
+        - "Enemy States": building-games/presentation-and-interface/gameplay-visual-states.md
+        - "Use Anchors": building-games/presentation-and-interface/hud-anchors.md
+        - "Use Containers": building-games/presentation-and-interface/hud-containers.md
+        - "Use Safe Margins": building-games/presentation-and-interface/hud-margins.md
+        - "Parallax": building-games/presentation-and-interface/parallax-backgrounds.md
+        - "Scale the User Interface": building-games/presentation-and-interface/ui-scaling.md
+        - "Connect Using Signals": building-games/presentation-and-interface/ui-signals.md
+        - "Camera Feedback": building-games/presentation-and-interface/visual-feedback-and-juice.md
+    - Scene Composition:
+        - building-games/scene-composition/index.md
+        - "Coordinate Space Conversion": building-games/scene-composition/coordinate-conversion.md
+        - "Following, Orbiting, and Relative Motion": building-games/scene-composition/following-and-orbiting.md
+        - "Create Ground": building-games/scene-composition/ground.md
+        - "Light a Scene": building-games/scene-composition/lighting-a-scene.md
+        - "Understand Local and Global Coordinates": building-games/scene-composition/local-vs-global-coordinates.md
+        - "Local and Global Coordinates": building-games/scene-composition/local-vs-global-practice.md
+        - "Create Environmental Mood": building-games/scene-composition/mood-and-atmosphere.md
+        - "Construct a Reusable Scene": building-games/scene-composition/reusable-scenes.md
+        - "Create a Sky Environment": building-games/scene-composition/sky-and-environment.md
+        - "Thinking in Directions": building-games/scene-composition/thinking-in-directions.md
+        - "Understanding Transform Basis": building-games/scene-composition/transform-basis.md
+        - "Parent Transform Inheritance": building-games/scene-composition/transform-inheritance.md
+    - Tile And Grid Worlds:
+        - building-games/tile-and-grid-worlds/index.md
+        - "Creating a TileSet": building-games/tile-and-grid-worlds/creating-a-tilemap.md
+        - "Grid Movement": building-games/tile-and-grid-worlds/grid-based-layout.md
+        - "Scene Transitions": building-games/tile-and-grid-worlds/level-transitions.md
+        - "Painting Tiles": building-games/tile-and-grid-worlds/painting-tiles.md
+        - "Procedural TileMaps": building-games/tile-and-grid-worlds/procedural-tilemaps.md
+        - "Reading TileMaps": building-games/tile-and-grid-worlds/reading-tile-data.md
+        - "Terrain Sets": building-games/tile-and-grid-worlds/terrain-sets.md
+        - "Tile-Based Level Structure": building-games/tile-and-grid-worlds/tile-based-level-structure.md
+        - "Collision Tiles": building-games/tile-and-grid-worlds/tilemap-collision.md
+        - "What is a TileMapLayer?": building-games/tile-and-grid-worlds/tilemap-intro.md
+        - "TileMap Layers": building-games/tile-and-grid-worlds/tilemap-layers.md
+        - "Collision & Interaction": building-games/tile-and-grid-worlds/topdown-collision.md
+        - "Continuous vs Grid Movement": building-games/tile-and-grid-worlds/topdown-continuous-movement.md
+        - "Facing Direction": building-games/tile-and-grid-worlds/topdown-facing-direction.md
+        - "Tweening": building-games/tile-and-grid-worlds/topdown-tweened-movement.md
+  - Techniques:
+    - techniques/index.md
+    - Dialogue And Narrative Delivery:
+        - techniques/dialogue-and-narrative-delivery/index.md
+        - "Dialogue": techniques/dialogue-and-narrative-delivery/dialogue-system.md
+    - Enemies And Combat:
+        - techniques/enemies-and-combat/index.md
+        - "Boss Design": techniques/enemies-and-combat/boss-encounters.md
+        - "Chase": techniques/enemies-and-combat/chase.md
+        - "Combat": techniques/enemies-and-combat/combat.md
+        - "Navigation": techniques/enemies-and-combat/enemy-navigation.md
+        - "Investigation": techniques/enemies-and-combat/investigation.md
+        - "Patrol": techniques/enemies-and-combat/patrol.md
+    - Inventory And Progression:
+        - techniques/inventory-and-progression/index.md
+        - "Area2D": techniques/inventory-and-progression/2d-area-trigger.md
+        - "Collectibles": techniques/inventory-and-progression/collectibles.md
+        - "Connecting Gameplay Systems": techniques/inventory-and-progression/connecting-collectibles-to-state.md
+        - "Damage Systems": techniques/inventory-and-progression/damage.md
+        - "Death & Destruction": techniques/inventory-and-progression/death-and-respawn.md
+        - "Inventory": techniques/inventory-and-progression/inventory.md
+        - "Quests": techniques/inventory-and-progression/quests.md
+    - Movement And Platforming:
+        - techniques/movement-and-platforming/index.md
+        - "Walking Into a Wall": techniques/movement-and-platforming/character-hits-wall.md
+        - "Conveyor Belt": techniques/movement-and-platforming/conveyor-belt.md
+        - "Coyote Time (2D)": techniques/movement-and-platforming/coyote-time-2d.md
+        - "Coyote Time (3D)": techniques/movement-and-platforming/coyote-time.md
+        - "Dash": techniques/movement-and-platforming/dash.md
+        - "Detect the Ceiling": techniques/movement-and-platforming/detect-ceiling.md
+        - "Detect the Floor": techniques/movement-and-platforming/detect-floor.md
+        - "Double Jump": techniques/movement-and-platforming/double-jump.md
+        - "Face Movement Direction": techniques/movement-and-platforming/face-movement-direction.md
+        - "Crossing a Finish Line": techniques/movement-and-platforming/finish-line.md
+        - "Follow the Player": techniques/movement-and-platforming/follow-the-player.md
+        - "Four-Way Movement": techniques/movement-and-platforming/four-way-movement.md
+        - "Jump Buffer (2D)": techniques/movement-and-platforming/jump-buffer-2d.md
+        - "Jump Buffer (3D)": techniques/movement-and-platforming/jump-buffer.md
+        - "Variable Jump Height": techniques/movement-and-platforming/jump-variations.md
+        - "Jump": techniques/movement-and-platforming/jump.md
+        - "Jumping": techniques/movement-and-platforming/jumping-2d.md
+        - "Knockback": techniques/movement-and-platforming/knockback.md
+        - "Detect a Ledge": techniques/movement-and-platforming/ledge-detect.md
+        - "Change Animations Based on Movement": techniques/movement-and-platforming/movement-driven-animation.md
+        - "Ride a Moving Platform": techniques/movement-and-platforming/moving-platform.md
+        - "One-Way Platforms": techniques/movement-and-platforming/one-way-platforms.md
+        - "Patrol Between Points": techniques/movement-and-platforming/patrol-between-points.md
+        - "Patrol Between Walls": techniques/movement-and-platforming/patrol-between-walls.md
+        - "Push a RigidBody": techniques/movement-and-platforming/push-objects.md
+        - "Rotating Platform": techniques/movement-and-platforming/rotating-platform.md
+        - "Slopes": techniques/movement-and-platforming/slopes-and-ramps.md
+        - "NPC Stops at a Wall": techniques/movement-and-platforming/stop-at-wall.md
+        - "Identify Which Side I Collided With": techniques/movement-and-platforming/which-side-collision.md
+    - Tile World Population:
+        - techniques/tile-world-population/index.md
+        - "Procedural Population": techniques/tile-world-population/populating-a-level.md
+        - "Spawn Systems": techniques/tile-world-population/spawning.md
+    - Triggers And World Interaction:
+        - techniques/triggers-and-world-interaction/index.md
+        - "Enter an Area": techniques/triggers-and-world-interaction/area-enter.md
+        - "Exit an Area": techniques/triggers-and-world-interaction/area-exit.md
+        - "Trigger a Checkpoint": techniques/triggers-and-world-interaction/checkpoint.md
+        - "Collect an Item": techniques/triggers-and-world-interaction/collect-item.md
+        - "Count Objects Inside an Area": techniques/triggers-and-world-interaction/count-objects-in-area.md
+        - "Scoring a Goal": techniques/triggers-and-world-interaction/goal-trigger.md
+        - "Interact": techniques/triggers-and-world-interaction/interact-with-object.md
+        - "Keys & Doors": techniques/triggers-and-world-interaction/keys-and-locks.md
+        - "Open a Door": techniques/triggers-and-world-interaction/open-a-door.md
+        - "Play a Sound": techniques/triggers-and-world-interaction/play-sound-on-trigger.md
+        - "Require Multiple Objects Inside an Area": techniques/triggers-and-world-interaction/require-multiple-triggers.md
+        - "Start a Dialogue": techniques/triggers-and-world-interaction/start-a-dialogue.md
+        - "Switches & Events": techniques/triggers-and-world-interaction/switches.md
+        - "World Interaction": techniques/triggers-and-world-interaction/tile-based-interaction.md
+  - Game Design Theory:
+    - game-design-theory/index.md
+    - Narrative Design:
+        - game-design-theory/narrative-design/index.md
+        - "Character": game-design-theory/narrative-design/character.md
+        - "Environmental Storytelling": game-design-theory/narrative-design/environmental-storytelling.md
+        - "Myth": game-design-theory/narrative-design/myth.md
+        - "Narrative Structures": game-design-theory/narrative-design/narrative-structures.md
+        - "Story vs Narrative": game-design-theory/narrative-design/story.md
+        - "Worldbuilding": game-design-theory/narrative-design/worldbuilding-as-narrative.md
+    - Production And Process:
+        - game-design-theory/production-and-process/index.md
+        - "Business Models": game-design-theory/production-and-process/business.md
+        - "Iteration": game-design-theory/production-and-process/iteration.md
+        - "Minimum Viable Product (MVP)": game-design-theory/production-and-process/mvp.md
+        - "Playtesting": game-design-theory/production-and-process/playtesting.md
+        - "Reflection": game-design-theory/production-and-process/reflection.md
+        - "Scope": game-design-theory/production-and-process/scope.md
+    - Systems Design:
+        - game-design-theory/systems-design/index.md
+        - "Balance": game-design-theory/systems-design/balance.md
+        - "Difficulty": game-design-theory/systems-design/difficulty.md
+        - "Dynamics": game-design-theory/systems-design/dynamics.md
+        - "Emergence": game-design-theory/systems-design/emergence.md
+        - "Flow": game-design-theory/systems-design/flow.md
+        - "Mechanics": game-design-theory/systems-design/mechanics-as-systems.md
+    - Understanding Games:
+        - game-design-theory/understanding-games/index.md
+        - "Core Mechanics": game-design-theory/understanding-games/core-mechanics-definition.md
+        - "Feedback": game-design-theory/understanding-games/feedback-loops.md
+        - "Game Genres": game-design-theory/understanding-games/genres.md
+        - "What is a Game?": game-design-theory/understanding-games/intro.md
+        - "Core Loops": game-design-theory/understanding-games/loops.md
+        - "Progression": game-design-theory/understanding-games/progression.md
+    - World And Level Design:
+        - game-design-theory/world-and-level-design/index.md
+        - "Branching": game-design-theory/world-and-level-design/branching.md
+        - "Critical Path": game-design-theory/world-and-level-design/critical-paths.md
+        - "Guidance": game-design-theory/world-and-level-design/guidance.md
+        - "Layering": game-design-theory/world-and-level-design/layering.md
+        - "Pacing": game-design-theory/world-and-level-design/pacing.md
+        - "Safe Spaces": game-design-theory/world-and-level-design/safe-spaces.md
